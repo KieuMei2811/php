@@ -7,10 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-   <?php 
-        $cdai=$_POST["dai"];
-        $crong=$_POST["rong"];
-        $dt=$cdai * $crong;
+    <?php 
+    $cdai=$_POST["dai"];
+    $crong=$_POST["rong"];
+    $dt=$cdai * $crong;
+    switch($dt){
+        case 200:
+            $tb = "Xây Villa" ;
+            break;
+        case 150:
+            $tb = "Xây biệt thự";
+            break;
+        case 100:
+            $tb = "Xây nhà cao tầng";
+            break;
+    }
     ?>
     <form id= "forml" name = "forml" method="post">
         <table width = "400" border="0" align ="center" cellpadding="2" cellspacing="2">
@@ -35,10 +46,20 @@
                 </td>
             </tr>
             <tr>
+               <td> <span class="style4">Nhận xét: </span></td>
+                <td><label>
+                    <input type="text" name="tb" id="tb" value="<?php echo $tb;?>" size ="20"/>
+                </label>
+                </td>
+            </tr>
+            <tr>
                 <td colspan ="2" align="center"> <label> <input type="submit" name="Submit" value="Tính"></label></td>
                 <td colspan="2">&nbsp:</td>
             </tr>
         </table>
-   </form>
+    </form>
 </body>
+<script>
+    document.getElementById(tb) = <?php echo $tb ?>
+</script>
 </html>
