@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <form name = "forml" method="post">
+    <form action="" method="post">
         <table align="center">
             <tr class="stylel">
                 <td colspan="2" align="center">ĐỔI</td>
@@ -34,6 +34,7 @@
                <td>Kq dặm:</td> 
                <label>
                     <td><input type="text" value="<?php echo kilomitores_to_miles($_POST["kilomitores"]) ?>"></td>
+                    <!-- Tham trị  -->
                 </label> 
             </tr>
             <tr>
@@ -42,10 +43,12 @@
         </table>
     </form>
 <?php
+   error_reporting(0);
    function kilomitores_to_miles($kilomitores=0){
     $miles_scale = 0.62;
     return $kilomitores * $miles_scale ;
    }
+
 ?>
 </body>
 </html>
