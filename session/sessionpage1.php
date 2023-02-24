@@ -24,12 +24,11 @@
 <body>
     <?php 
         session_start();
-        $flag = 0;
         if (!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["add"]))
         {
-            $inform = $_POST["name"]. " - ". $_POST["mail"]." - ". $_POST["add"];
-            setcookie("khach_hang", $inform, time()+60);
-            $flag = 1;
+            $_SESSION["name"] = $_POST['name'];
+            $_SESSION["mail"] = $_POST['mail'];
+            $_SESSION["add"] = $_POST['add'];
         }
     ?>
 
@@ -67,7 +66,7 @@
             <tr class="center">
                 <td></td>
                 <td colspan="2">
-                    <button type="submit">Xác nhận</button>
+                    <button type="submit" name="submit" value="<?php if(isset($_POST['submit'])) echo $_POST["submit"]; ?>">Xác nhận</button>
                 </td>
             </tr>
         </table>
@@ -75,12 +74,14 @@
     </br>
     <font color="#1E50C4" align="center">
         <?php 
-            if($flag==1)
+            if(isset($_POST['submit']))
             {
                 echo "<table align='center'><tr class='center'><td>";
-                echo "<font color='#ffffff'>Thông tin khách hàng: </br>";
-                echo $_COOKIE["khach_hang"]. "<br>";
-                echo "<a href='cookies_doc.php'>Click here!</a>";
+                echo "<font color='#ffffff'>Thông tin khách hàng </br>";
+                echo "<p>Xin Chào ".$_SESSION["name"].  "<br>";
+                echo "<p>Email:  ".$_SESSION["mail"].  "<br>";
+                echo "<p>Địa chỉ:  ".$_SESSION["add"].  "<br>";
+                echo "<a href='sessionpage2.php'>Click here!</a>";
                 echo "</td></tr></table>";
             }
         ?>
