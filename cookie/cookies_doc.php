@@ -23,6 +23,12 @@
         i {
             color: blue;
         }
+        .title{
+            position:relative;
+            right:600px;
+            
+        }
+       
        
 
        
@@ -32,12 +38,12 @@
 <body>
     <table>
         <tr >
-            <th >
+            <th>
                 <img class='photo'
                     src='https://luatduonggia.vn/wp-content/uploads/2022/11/ong-gia-noel-la-ai-dieu-thu-vi-ve-ong-gia-noel-santa-claus.jpeg'>
                 <br />
             </th>
-            <th class="class1">
+            <th class="title">
                 <?php
                 echo "<p class='click'> Kết quả sau khi nhấn <i>Click here!</i> Trang session</p>";
                 echo "<p class='kq'>Xin chào!</p>" . $_COOKIE["khach_hang"] . "<br>" . "<br>";

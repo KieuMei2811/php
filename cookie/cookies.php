@@ -13,6 +13,7 @@
         background:#CC9999;
         width: 400px;
         height:200px;
+        border-radius:15px 15px 15px 15px;
       }
       button{
         background:#33CC66;
