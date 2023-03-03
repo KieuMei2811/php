@@ -79,7 +79,7 @@
                 echo "<table align='center'><tr class='center'><td>";
                 echo "<font color='#ffffff'>Thông tin khách hàng </br>";
                 echo "<p>Xin Chào ".$_SESSION["name"].  "<br>";
-                echo "<p>Email:  ".$_SESSION["mail"].  "<br>";
+                echo "<p>Email:  ".$_SESSION["mail"].$_SESSION["add"].  "<br>";
                 echo "<p>Địa chỉ:  ".$_SESSION["add"].  "<br>";
                 echo "<a href='sessionpage2.php'>Click here!</a>";
                 echo "</td></tr></table>";

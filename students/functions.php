@@ -20,4 +20,5 @@ function get_flash_session($key){
     }
 
 }
+?>
 

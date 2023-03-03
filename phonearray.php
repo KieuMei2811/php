@@ -105,7 +105,7 @@
                 )
 
             )   
-        )
+                )
     ?>
 
 
@@ -117,7 +117,8 @@
                 <div class="container"> <br/> <br/>
                     <div class="list_title">*<?php echo $k; ?>*</div>
                     <div class="row">
-                        <?php foreach ($v as $k1 => $v1){
+                        <?php foreach ($v as $k1 => $v1)
+                        {
                             ?>
                             <div class="col-2">
                                 <p class="card-img"><?php echo $v1['img'] ?></p>
@@ -134,7 +135,8 @@
                                 
 
                             </div>
-                       <?php   }
+                       <?php 
+                         }
                         ?>
                     </div>
 

@@ -50,7 +50,7 @@
                 echo "Xin chào! " .$_SESSION["name"]. "<br>" ;
                 echo " Emai: ".$_SESSION["mail"].  "<br>";
                 echo " Địa chỉ: ".$_SESSION["add"].  "<br>";
-                echo "<a href='sessionpage1.php'>Quay về trang đăng nhập</a> ";
+                echo "<a href='sessionpage1.php'>Back</a> ";
                 ?>
             </th>
         </tr>
